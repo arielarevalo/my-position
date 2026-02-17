@@ -2,14 +2,14 @@
 
 from pathlib import Path
 
-from my_position.extract.models import (
+from myposition.extract.models import (
     CATEGORY_DIRS,
     CategorizationResult,
     FileCategory,
     FileMetadata,
     MisplacedFile,
 )
-from my_position.extract.validators import (
+from myposition.extract.validators import (
     ConversationValidator,
     DocumentValidator,
     FileValidator,

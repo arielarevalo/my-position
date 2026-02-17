@@ -1,6 +1,6 @@
-# my-position
+# myposition
 
-[![CI](https://github.com/arielarevalo/my-position/actions/workflows/ci.yml/badge.svg)](https://github.com/arielarevalo/my-position/actions/workflows/ci.yml)
+[![CI](https://github.com/arielarevalo/myposition/actions/workflows/ci.yml/badge.svg)](https://github.com/arielarevalo/myposition/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Synthesize your positions on topics from conversations, notes, and documents.**
@@ -24,8 +24,8 @@ A CLI tool that processes your Markdown conversations, notes, and documents to i
 
 ```bash
 # Clone the repository
-git clone https://github.com/arielarevalo/my-position.git
-cd my-position
+git clone https://github.com/arielarevalo/myposition.git
+cd myposition
 
 # Install dependencies
 uv sync
@@ -35,16 +35,16 @@ uv sync
 
 ```bash
 # Display usage information
-uv run my-position
+uv run myposition
 
 # Ingest Markdown files (coming soon)
-uv run my-position ingest ./notes/*.md
+uv run myposition ingest ./notes/*.md
 
 # Synthesize positions (coming soon)
-uv run my-position synthesize --topic "software-architecture"
+uv run myposition synthesize --topic "software-architecture"
 
 # Export positions (coming soon)
-uv run my-position export --format markdown --output positions.md
+uv run myposition export --format markdown --output positions.md
 ```
 
 ## Development
@@ -56,7 +56,7 @@ uv run my-position export --format markdown --output positions.md
 uv run pytest
 
 # Run with coverage
-uv run pytest --cov=my_position --cov-report=html
+uv run pytest --cov=myposition --cov-report=html
 
 # Run specific test file
 uv run pytest tests/test_main.py
@@ -89,9 +89,9 @@ The project uses GitHub Actions for continuous integration:
 ## Architecture
 
 ```
-my-position/
+myposition/
 ├── src/
-│   └── my_position/           # Main package
+│   └── myposition/           # Main package
 │       ├── __init__.py
 │       ├── main.py            # CLI entry point
 │       ├── cli.py             # CLI implementation

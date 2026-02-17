@@ -1,10 +1,10 @@
-"""Command-line interface for my-position."""
+"""Command-line interface for myposition."""
 
 import argparse
 import sys
 from pathlib import Path
 
-from my_position.extract import Scanner
+from myposition.extract import Scanner
 
 
 class CLI:
@@ -13,7 +13,7 @@ class CLI:
     def __init__(self) -> None:
         """Initialize CLI with argument parser."""
         self.parser = argparse.ArgumentParser(
-            prog="my-position",
+            prog="myposition",
             description="Synthesize positions from conversations, notes, and documents",
         )
         subparsers = self.parser.add_subparsers(

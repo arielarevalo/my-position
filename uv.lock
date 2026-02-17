@@ -90,7 +90,7 @@ wheels = [
 ]
 
 [[package]]
-name = "my-position"
+name = "myposition"
 version = "0.1.0"
 source = { editable = "." }
 

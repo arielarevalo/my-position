@@ -1,6 +1,6 @@
-"""Main entry point for my-position CLI."""
+"""Main entry point for myposition CLI."""
 
-from my_position.cli import CLI
+from myposition.cli import CLI
 
 
 def main() -> None:

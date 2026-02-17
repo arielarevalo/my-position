@@ -1,1 +1,1 @@
-"""Test suite for my-position."""
+"""Test suite for myposition."""

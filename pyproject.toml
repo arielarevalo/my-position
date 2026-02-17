@@ -1,5 +1,5 @@
 [project]
-name = "my-position"
+name = "myposition"
 version = "0.1.0"
 description = "Synthesize your positions on topics from conversations, notes, and documents"
 readme = "README.md"
@@ -17,7 +17,7 @@ build-backend = "hatchling.build"
 package = true
 
 [project.scripts]
-my-position = "my_position.main:main"
+myposition = "myposition.main:main"
 
 [dependency-groups]
 dev = [
@@ -38,7 +38,7 @@ select = ["E", "F", "I", "UP", "B", "SIM", "RUF", "PT", "ANN", "S"]
 "tests/**/*.py" = ["S101"]  # Allow assert in tests
 
 [tool.ruff.lint.isort]
-known-first-party = ["my_position"]
+known-first-party = ["myposition"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

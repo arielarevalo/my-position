@@ -33,7 +33,7 @@ jobs:
         run: uvx ty check
 
       - name: Run tests
-        run: uv run pytest --cov=my_position --cov-report=xml
+        run: uv run pytest --cov=myposition --cov-report=xml
 
       - name: Upload coverage
         uses: codecov/codecov-action@v5

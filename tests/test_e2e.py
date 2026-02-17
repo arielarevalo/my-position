@@ -21,7 +21,7 @@ class TestE2E:
 
         # Run command via current Python interpreter (works in any environment)
         result = subprocess.run(  # noqa: S603 - hardcoded test command
-            [sys.executable, "-m", "my_position.main", "extract", str(tmp_path)],
+            [sys.executable, "-m", "myposition.main", "extract", str(tmp_path)],
             capture_output=True,
             text=True,
             check=False,

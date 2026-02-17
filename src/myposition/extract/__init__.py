@@ -4,13 +4,13 @@ Scans input directories for markdown files, validates them, and produces
 categorized file metadata.
 """
 
-from my_position.extract.models import (
+from myposition.extract.models import (
     CategorizationResult,
     FileCategory,
     FileMetadata,
     MisplacedFile,
 )
-from my_position.extract.scanner import Scanner
+from myposition.extract.scanner import Scanner
 
 __all__ = [
     "CategorizationResult",

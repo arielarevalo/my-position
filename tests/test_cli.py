@@ -5,7 +5,7 @@ from io import StringIO
 from pathlib import Path
 from unittest.mock import patch
 
-from my_position.cli import CLI
+from myposition.cli import CLI
 
 
 class TestCLI:

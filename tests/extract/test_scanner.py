@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from my_position.extract import FileCategory, Scanner
+from myposition.extract import FileCategory, Scanner
 
 
 class TestScanner:

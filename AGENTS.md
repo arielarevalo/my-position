@@ -1,4 +1,4 @@
-# Agent Instructions for my-position
+# Agent Instructions for myposition
 
 > **Context rule**: Whenever `AGENTS.md` is brought into context,
 > also bring `README.md` and `.claude/CLAUDE.md` into context.
@@ -8,7 +8,7 @@ Python CLI application using uv for dependency management
 
 ## Project Purpose
 
-**my-position** is a CLI tool that synthesizes personal positions on topics from Markdown content.
+**myposition** is a CLI tool that synthesizes personal positions on topics from Markdown content.
 
 **Architecture Overview**
 
@@ -44,10 +44,10 @@ This is an **ETL pipeline** architecture:
 ## Run Commands
 ```bash
 # Run the application
-uv run my_position
+uv run myposition
 
 # Run directly with Python
-uv run python -m my_position.main
+uv run python -m myposition.main
 ```
 
 ## Test Commands
@@ -56,7 +56,7 @@ uv run python -m my_position.main
 uv run pytest
 
 # Run with coverage
-uv run pytest --cov=my_position --cov-report=html
+uv run pytest --cov=myposition --cov-report=html
 
 # Run specific test file
 uv run pytest tests/test_example.py
@@ -84,7 +84,7 @@ uv run ruff check --fix . && uv run ruff format . && uvx ty check && uv run pyte
 
 ### Code Style
 - **OOP**: Prefer classes and class hierarchies over standalone functions
-- Use src layout: `src/my_position/`
+- Use src layout: `src/myposition/`
 - Type hints required on all functions
 - Google-style docstrings
 - Descriptive names, no type-redundant suffixes

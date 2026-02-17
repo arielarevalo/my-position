@@ -1,6 +1,7 @@
 """End-to-end tests using subprocess."""
 
 import subprocess
+import sys
 from pathlib import Path
 
 
@@ -18,13 +19,12 @@ class TestE2E:
         (tmp_path / "notes" / "idea.md").write_text("Quick note")
         (tmp_path / "documents" / "essay.md").write_text("# Essay\n" + "x" * 3000)
 
-        # Run command via venv python to avoid uv cache permission issues
+        # Run command via current Python interpreter (works in any environment)
         result = subprocess.run(  # noqa: S603 - hardcoded test command
-            [".venv/bin/python3", "-m", "my_position.main", "extract", str(tmp_path)],
+            [sys.executable, "-m", "my_position.main", "extract", str(tmp_path)],
             capture_output=True,
             text=True,
             check=False,
-            cwd="/Users/ariel/workspace/my-position",
         )
 
         assert result.returncode == 0, (

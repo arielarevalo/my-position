@@ -1,7 +1,7 @@
 """File validators for the extract layer."""
 
 import hashlib
-from abc import ABC
+from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import ClassVar
 
@@ -16,6 +16,7 @@ class FileValidator(ABC):
         {".md", ".markdown", ".txt"}
     )
 
+    @abstractmethod
     def validate(self, path: Path) -> bool:
         """Validate that a file belongs to this category.
 
@@ -36,7 +37,7 @@ class FileValidator(ABC):
             return False
         if not path.is_file():
             return False
-        if path.suffix.lower() not in self.ALLOWED_EXTENSIONS:
+        if path.suffix.lower() not in self.ALLOWED_EXTENSIONS:  # noqa: SIM103
             return False
         return True
 

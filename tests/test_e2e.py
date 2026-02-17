@@ -19,7 +19,7 @@ class TestE2E:
         (tmp_path / "documents" / "essay.md").write_text("# Essay\n" + "x" * 3000)
 
         # Run command via venv python to avoid uv cache permission issues
-        result = subprocess.run(
+        result = subprocess.run(  # noqa: S603 - hardcoded test command
             [".venv/bin/python3", "-m", "my_position.main", "extract", str(tmp_path)],
             capture_output=True,
             text=True,
@@ -27,7 +27,9 @@ class TestE2E:
             cwd="/Users/ariel/workspace/my-position",
         )
 
-        assert result.returncode == 0, f"stdout: {result.stdout}\nstderr: {result.stderr}"
+        assert result.returncode == 0, (
+            f"stdout: {result.stdout}\nstderr: {result.stderr}"
+        )
         assert "conversations:" in result.stdout
         assert "notes:" in result.stdout
         assert "documents:" in result.stdout

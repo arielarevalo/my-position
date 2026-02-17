@@ -28,7 +28,10 @@ class CLI:
         extract_parser.add_argument(
             "input_dir",
             type=Path,
-            help="Directory containing conversations/, notes/, and documents/ subdirectories",
+            help=(
+                "Directory containing conversations/, notes/, "
+                "and documents/ subdirectories"
+            ),
         )
 
     def run(self, args: list[str] | None = None) -> None:
@@ -117,9 +120,7 @@ class CLI:
         source.rename(dest_path)
         print(f"  ✓ Moved to {dest_path}")
 
-    def _move_all_misplaced(
-        self, misplaced_files: list, input_dir: Path
-    ) -> None:
+    def _move_all_misplaced(self, misplaced_files: list, input_dir: Path) -> None:
         """Move all misplaced files to their suggested directories.
 
         Args:

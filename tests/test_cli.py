@@ -1,5 +1,6 @@
 """Integration tests for CLI."""
 
+import contextlib
 from io import StringIO
 from pathlib import Path
 from unittest.mock import patch
@@ -15,10 +16,8 @@ class TestCLI:
         cli = CLI()
 
         with patch("sys.stdout", new=StringIO()) as mock_stdout:
-            try:
+            with contextlib.suppress(SystemExit):
                 cli.run(["extract", "--help"])
-            except SystemExit:
-                pass  # argparse calls sys.exit after --help
 
             output = mock_stdout.getvalue()
             assert "extract" in output.lower()
